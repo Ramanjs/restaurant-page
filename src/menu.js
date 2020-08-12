@@ -1,12 +1,15 @@
 const menu = (() => {
     const getContent = () => {
-        const heading = document.createElement('h1');
-        heading.innerText = 'Welcome to Noice Restaurant';
-
         const para = document.createElement('p');
-        para.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias sit earum ducimus odio necessitatibus architecto. Est exercitationem, enim consectetur totam sapiente adipisci voluptatibus, sed eligendi reprehenderit labore illum! Dignissimos, deserunt';
+        para.classList.add('info');
 
-        return [heading, para];
+        for (let i=0; i<5;i++) {
+            let item = document.createElement('p');
+            item.innerText = 'Lorem ipsum.....................................................................................$10';
+            para.appendChild(item);
+        }
+
+        return ['menu', para];
     };
     return {getContent};
 })();

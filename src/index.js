@@ -15,4 +15,5 @@ const navbar = (() => {
     return {init};
 })();
 
+dom.appendContent.bind(home.getContent()).call();
 navbar.init();

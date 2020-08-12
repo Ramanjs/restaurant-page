@@ -7,10 +7,20 @@ const dom = (() => {
     };
     const appendContent = function() {
         clearContent();
-        this.forEach(element => {
-            content.appendChild(element);
+        this.forEach((element, index) => {
+            if (index) {
+                content.appendChild(element);
+            } else {
+                setCurrentTab(element);
+            }
         });
     }
+    const setCurrentTab = it => {
+        document.querySelectorAll('.item').forEach(element => {
+            element.classList.remove('cur');
+        })
+        document.getElementById(`${it}`).classList.add('cur');
+    };
     return {appendContent};
 })();
 

@@ -1,12 +1,18 @@
 const contact = (() => {
     const getContent = () => {
-        const heading = document.createElement('h1');
-        heading.innerText = 'Welcome to Noice Restaurant';
-
         const para = document.createElement('p');
-        para.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias sit earum ducimus odio necessitatibus architecto. Est exercitationem, enim consectetur totam sapiente adipisci voluptatibus, sed eligendi reprehenderit labore illum! Dignissimos, deserunt';
+        para.classList.add('info');
+        
+        let name = document.createElement('p');
+        name.innerText = 'Noice Restaurant'
 
-        return [heading, para];
+        let contact = document.createElement('p')
+        contact.innerText = '999-999-999\ndemo@demo.com';
+
+        para.appendChild(name);
+        para.appendChild(contact);
+
+        return ['contact', para];
     };
     return {getContent};
 })();
