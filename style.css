@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    color: whitesmoke;
 }
 
 #navbar {
@@ -8,6 +12,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #list {
@@ -20,4 +25,29 @@ body {
 .item {
     padding: 16px 32px;
     cursor: pointer;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 100px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.info {
+    margin-top: 100px;
+    padding: 20px 40px;
+    border-radius: 4px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cur {
+    background-color: rgba(0, 0, 0, 0.9);
 }
